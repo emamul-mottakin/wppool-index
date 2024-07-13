@@ -1,0 +1,92 @@
+@font-face {
+  font-family: primary-regular;
+  src: url(../font/Serif6Beta-Regular.otf);
+}
+
+@font-face {
+  font-family: secondary-regular;
+  src: url(../font/OpenSauceOne-Regular.ttf);
+}
+@font-face {
+  font-family: secondary-bold;
+  src: url(../font/OpenSauceOne-Bold.ttf);
+}
+@font-face {
+  font-family: secondary-extra-bold;
+  src: url(../font/OpenSauceOne-ExtraBold.ttf);
+}
+
+* {
+  font-family: primary-regular;
+}
+
+// ########## dashboard section css ############
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+// ########## table section css ############
+
+#companies-table {
+  // rounded row
+  th,
+  td {
+    &:first-child {
+      border-top-left-radius: 6px;
+    }
+  }
+  th,
+  td {
+    &:last-child {
+      border-top-right-radius: 6px;
+    }
+  }
+  th,
+  td {
+    &:first-child {
+      border-bottom-left-radius: 6px;
+    }
+  }
+  th,
+  td {
+    &:last-child {
+      border-bottom-right-radius: 6px;
+    }
+  }
+  // gray background row
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background: #e5e7eb;
+      }
+    }
+  }
+}
+
+//custome scrollbar
+.table-scrollbar {
+  position: relative;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    content: "";
+    left: 0px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 255, 0.219);
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(36, 36, 247);
+    border-radius: 6px;
+  }
+}
